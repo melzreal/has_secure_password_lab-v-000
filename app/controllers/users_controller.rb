@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
 
   def new
+
     @user = User.new
   end
 
   def create
+    binding.pry
     if !params[:name][:password] || params[:user]== ""
      redirect_to '/sessions/new'
    else
