@@ -10,6 +10,7 @@ class UsersController < ApplicationController
    else
      User.create(user_params)
    end
+ end
 
    private
 
