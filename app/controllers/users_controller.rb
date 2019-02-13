@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def create
     binding.pry
-    if !params[:name][:password] || params[:user]== ""
+    if !params[:user][:password] || params[:user]== ""
      redirect_to '/sessions/new'
    else
      User.create(user_params)
