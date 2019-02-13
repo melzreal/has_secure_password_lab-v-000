@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
     if !params[:user] || params[:user]== ""
      redirect_to '/sessions/new'
    else
