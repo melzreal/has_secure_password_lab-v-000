@@ -5,6 +5,9 @@ class UsersController < ApplicationController
   end
 
   def create
+    if !params[:name][:password] || params[:user]== ""
+     redirect_to '/sessions/new'
+   else
      User.create(user_params)
    end
 
