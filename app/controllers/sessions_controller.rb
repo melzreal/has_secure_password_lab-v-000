@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def create
   if params[:user][:password] && params[:user][:password] != ""
-    @user = User.find_by(name: params[:name])
+    @user = User.find_by(name: params[:user][:name])
    if @user.authenticate(params[:password])
         session[:user_id] = @user.id
         redirect_to hello_path
